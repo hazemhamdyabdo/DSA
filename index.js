@@ -56,6 +56,9 @@ console.log(same([1, 2, 3], [1, 4, 9, 8]));
 */
 
 const validAnagram = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false;
+  }
   const frequenciesOne = {};
   const frequenciesTow = {};
 
@@ -76,11 +79,6 @@ const validAnagram = (str1, str2) => {
   }
 
   return true;
-  // for (const key in frequenciesTow) {
-  //   if (!(key in frequenciesOne)) {
-  //     return false;
-  //   }
-  // }
 };
 
 console.log(validAnagram("", ""));
