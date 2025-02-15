@@ -56,33 +56,45 @@ console.log(same([1, 2, 3], [1, 4, 9, 8]));
 */
 
 const validAnagram = (str1, str2) => {
-  // let isThereChar = true;
-
   const frequenciesOne = {};
   const frequenciesTow = {};
 
   for (const key of str1) {
-    frequenciesOne[key] = (frequenciesOne[key] ?? 0) + 1;
+    frequenciesOne[key] = (frequenciesOne[key] || 0) + 1;
   }
   for (const key of str2) {
     frequenciesTow[key] = (frequenciesTow[key] ?? 0) + 1;
   }
 
-  console.log(frequenciesOne);
-  console.log(frequenciesTow);
+  for (const key in frequenciesOne) {
+    if (!(key in frequenciesTow)) {
+      return false;
+    }
+    if (frequenciesTow[key] !== frequenciesOne[key]) {
+      return false;
+    }
+  }
 
-  // for (const char of str1) {
-  //   if (!str2.includes(char)) {
-  //     isThereChar = false;
+  return true;
+  // for (const key in frequenciesTow) {
+  //   if (!(key in frequenciesOne)) {
+  //     return false;
   //   }
   // }
-  // for (const char2 of str2) {
-  //   if (!str1.includes(char2)) {
-  //     isThereChar = false;
-  //   }
-  // }
-  // return isThereChar;
 };
 
-// console.log(validAnagram("", ""));
+console.log(validAnagram("", ""));
+
 console.log(validAnagram("aaz", "zza"));
+
+console.log(validAnagram("anagram", "nagaram"));
+
+console.log(validAnagram("rat", "car"));
+
+console.log(validAnagram("awesome", "awesom"));
+
+console.log(validAnagram("amanaplanacanalpanama", "acanalmanplanpamana"));
+
+console.log(validAnagram("qwerty", "qeywrt"));
+
+console.log(validAnagram("texttwisttime", "timetwisttext"));
