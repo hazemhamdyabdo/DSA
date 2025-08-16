@@ -1,0 +1,142 @@
+[
+  { "paths": [["A", "B"]], "expected": "B" },
+  {
+    "paths": [
+      ["A", "B"],
+      ["B", "C"]
+    ],
+    "expected": "C"
+  },
+  {
+    "paths": [
+      ["London", "New York"],
+      ["New York", "Lima"],
+      ["Lima", "Sao Paulo"]
+    ],
+    "expected": "Sao Paulo"
+  },
+  {
+    "paths": [
+      ["B", "C"],
+      ["A", "B"]
+    ],
+    "expected": "C"
+  },
+  {
+    "paths": [
+      ["San Jose", "San Juan"],
+      ["San Juan", "Ponce"]
+    ],
+    "expected": "Ponce"
+  },
+  {
+    "paths": [
+      ["a", "B"],
+      ["B", "c"]
+    ],
+    "expected": "c"
+  },
+  {
+    "paths": [
+      ["Paris", "london"],
+      ["london", "Berlin"]
+    ],
+    "expected": "Berlin"
+  },
+  {
+    "paths": [
+      ["القاهرة", "الإسكندرية"],
+      ["الإسكندرية", "مرسى مطروح"]
+    ],
+    "expected": "مرسى مطروح"
+  },
+  {
+    "paths": [
+      ["México", "Bogotá"],
+      ["Bogotá", "Quito"],
+      ["Quito", "Lima"]
+    ],
+    "expected": "Lima"
+  },
+  {
+    "paths": [
+      ["🚀", "🌕"],
+      ["🌕", "🪐"]
+    ],
+    "expected": "🪐"
+  },
+  {
+    "paths": [
+      ["Nagoya", "Fukuoka-city"],
+      ["Fukuoka-city", "Kagoshima"]
+    ],
+    "expected": "Kagoshima"
+  },
+  {
+    "paths": [
+      ["Zone1", "Zone2"],
+      ["Zone2", "Zone3"],
+      ["Zone3", "Zone4"]
+    ],
+    "expected": "Zone4"
+  },
+  {
+    "paths": [
+      ["C0", "C1"],
+      ["C1", "C2"],
+      ["C2", "C3"],
+      ["C3", "C4"],
+      ["C4", "C5"],
+      ["C5", "C6"],
+      ["C6", "C7"],
+      ["C7", "C8"]
+    ],
+    "expected": "C8"
+  },
+  {
+    "paths": [
+      ["X2", "X3"],
+      ["X0", "X1"],
+      ["X1", "X2"],
+      ["X3", "X4"]
+    ],
+    "expected": "X4"
+  },
+  {
+    "paths": [
+      ["A", "B"],
+      ["C", "D"],
+      ["B", "C"]
+    ],
+    "expected": "D"
+  },
+  {
+    "paths": [
+      ["Malaga", "Zürich"],
+      ["Zürich", "Genève"]
+    ],
+    "expected": "Genève"
+  },
+  {
+    "paths": [
+      ["x", "y"],
+      ["y", "z"]
+    ],
+    "expected": "z"
+  },
+  {
+    "paths": [
+      ["International-Airport-Terminal-1", "Central-Station-Block-3"],
+      ["Central-Station-Block-3", "Harbor-Pier-77"]
+    ],
+    "expected": "Harbor-Pier-77"
+  },
+  {
+    "paths": [
+      ["Node_01", "Node_02"],
+      ["Node_02", "Node_03"],
+      ["Node_03", "Node_99"]
+    ],
+    "expected": "Node_99"
+  }
+]
